@@ -1,23 +1,27 @@
+# Ejercicio en clase ItI 1312-2022
 
-# Ejercicio en clase ItI 1312-2022 - Semana 05
-
-# Cómo correr el app?
+# Cómo correr los apis localmente?
 
 1. Tener instalado Visual Code y nodejs
 2. Bajar la aplicación en la computadora.
 3. Abrir el proyecto (folder donde está la aplicación) en visual Code.
+
+    Carpeta **products** y **users** son proyectos de api por separado
 4. Abrir la terminal (menu View--> terminal)
 5. En la terminal poner el siguiente comando: **npm install** para que se instalen las dependencias del app.
 6. Para correr el app ejecutar en la terminal el siguiente comando: **npm start**
-7. No cerrar la terminal, ni el Visual Code y abrir el app en el browser con el siguiente url: [http://localhost:4200/](http://localhost:4200/)
-8. Podrá visualizar la lista de usuarios en la siguiente dirección: http://localhost:4200/api/users/users.json
-9. Podrá visualizar la lista de productos en la siguiente dirección: http://localhost:4200/api/products/products.json
+7. No cerrar la terminal, ni el Visual Code y acceder al api de products con la siguiente url: [http://localhost:3007/products](http://localhost:3007/products) y el api de users con la siguiente url:  [http://localhost:3008/users](http://localhost:3008/users)
 
+## Apis en cloud
+- Users: [https://tools-users-api.azurewebsites.net/users/](https://tools-users-api.azurewebsites.net/users/)
+- Products: [https://tools-product-api.azurewebsites.net/products/](https://tools-product-api.azurewebsites.net/products/)
 
-# Qué debe realizar?
-1. Deberá acceder a su tablero (su nombre - Ferreteria) en Trello y deberá por cada Historia de Usuario (en la sección de Sprint 1) crear casos de pruebas (subir a cada historia de usuario el archivo con los casos de pruebas).
-2. Posterior al escribir los casos de pruebas (para cada US), deberá ejecutar los casos de pruebas.
-3. Para cada caso de prueba donde no pasó la prueba deberá generar los defectos (en trello, en el mismo tablero hacer una columna de Defects), cada defecto deberá tener el step by step de cómo reproducir dicho defecto y así el desarrollador pueda encontrar y solucionar el defecto. Adicional, poner una etiqueta de color amarillo con el nombre "No iniciado".
-4. El resultado final de los casos de pruebas deberá subirlo a cada historia de usuario correspondiente.
-5. Al registrar un nuevo defect debe seleccionarlo como Defect e indicar el responsable.
-6. Cuando un defecto haya sido corregido, volver a testearlo y si todo está bien poner la etiqueda en color celeste con el nombre "Aprobado", si el defecto aun persiste poner la etiqueta en color amarillo con el nombre "No Iniciado".
+## Endpoints de los apis
+| Endpoint | Método | Descripción | Input | Output | Ejemplo | Excepciones |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| GetAllProducts | GET | Retorna todos los productos almacenados |  | [{"productId": 2,"productName": "Garden Cart","productCode": "GDN-0023", "releaseDate": "March 18, 2019","price": 32.99,"description": "15 gallon capacity rolling garden cart","starRating": 5,"imageUrl": "assets/images/garden.jpg"}, {"productId": 5,"productName": "Hammer","productCode": "TBX-0048","releaseDate": "May 21, 2019","price": 8.9,"description": "Curved claw steel hammer","starRating": 4.6,"imageUrl": "assets/images/hammer.jpg"},{"productId": 7,"productName": "Drill","productCode": "PRX-095","releaseDate": "Sept 2nd, 2019","price": 32.9,"description": "","starRating": 3.2,"imageUrl": "assets/images/drill.jpg"} | https://tools-product-api.azurewebsites.net/products | Si no hay productos se devuelve un [] | 
+| GetAProduct | GET | Devuelve la información de un producto | productId | [{"productId": 5,"productName": "Hammer","productCode": "TBX-0048","releaseDate": "May 21, 2019","price": 8.9,"description": "Curved claw steel hammer","starRating": 4.6,"imageUrl": "assets/images/hammer.jpg"}] | https://tools-product-api.azurewebsites.net/products/5 | Si no existe el producto consultado, se devuelve: {"success": "false", "message": "Product not found"} |
+| DeleteProduct | DELETE | Elimina un producto | productId | [{"productId": 5,"productName": "Hammer","productCode": "TBX-0048","releaseDate": "May 21, 2019","price": 8.9,"description": "Curved claw steel hammer","starRating": 4.6,"imageUrl": "assets/images/hammer.jpg"}] | https://tools-product-api.azurewebsites.net/products/5 | Si no existe el producto que se desea eliminar, se devuelve: {"success": "false","message": "The product does not exist. Specify a product that is already stored."} |
+| InsertProduct | POST | Insertar un producto | {"productId": 11,"productName": "Big Hammer","productCode": "GDN-0030","releaseDate": "March 18, 2019","price": 60,"description":"Curved steel hammer","starRating": 3,"imageUrl": "assets/images/hammer.jpg"} | {"productId": 11,"productName": "Big Hammer","productCode": "GDN-0030","releaseDate": "March 18, 2019","price": 60,"description":"Curved steel hammer","starRating": 3,"imageUrl": "assets/images/hammer.jpg"} | https://tools-product-api.azurewebsites.net/products/ |  |
+| UpdateProduct | PUT | Actualizar un producto | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | https://tools-product-api.azurewebsites.net/products/ | Si el prducto que desea actualizar no existe, se devuelve: {"success": "false","message": "The product does not exist. Specify a product that is already stored."} |
+
