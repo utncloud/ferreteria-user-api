@@ -26,7 +26,6 @@
 | UpdateProduct | PUT | Actualizar un producto | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | https://tools-product-api.azurewebsites.net/products/ | Si el prducto que desea actualizar no existe, se devuelve: {"success": "false","message": "The product does not exist. Specify a product that is already stored."} |
 
 
-
 ## Qué debe realizar?
 1. Investigar sobre pruebas de automatización en Postman.
 2. Realizar pruebas de automatización para cada endpoint brindado (ver los endpoints en el cuadro de arriba)

@@ -94,7 +94,7 @@ exports.update_a_product = function(req, res) {
     };
 
     products.push(newproduct);
-    res.status(200).send(products);
+    res.status(200).send(newproduct);
 };
 
 exports.delete_a_product = function(req, res) {
@@ -108,8 +108,9 @@ exports.delete_a_product = function(req, res) {
         res.status(404).send({ success: 'false', message: 'The product does not exist. Specify a product that is already stored.' });
         return;
     }
+    let deletedproduct = products[index];
     products.splice(index, 1);
-    res.status(200).send(products);
+    res.status(200).send(deletedproduct);
 };
 
 exports.update_products = function(req, res) {
