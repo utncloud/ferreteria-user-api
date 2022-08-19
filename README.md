@@ -30,3 +30,19 @@
 1. Investigar sobre pruebas de automatización en Postman.
 2. Realizar pruebas de automatización para cada endpoint brindado (ver los endpoints en el cuadro de arriba)
 3. Subir al campus el archivo de la prueba o video donde demuestre la realización de la prueba.
+
+
+
+
+## Endpoints de api SALES -- 19 Agosto 2022
+| Endpoint | Método | Descripción | Input | Output | Ejemplo | Excepciones |
+| ------ | ------ | ------ | ------ | ------ | ------ | ------ |
+| getAllSales | GET | Retorna todos las ventas |  | [{"productId":2,"saleDate":"2022-08-19", "userId":"rloria", "customerName": "Ever Barahona", "quantity":2, "unitPrice":1500}] | https://tools-sales-api.azurewebsites.net/sales | Si no hay ventas se devuelve un [] | 
+| create_a_sale | POST | Inserta una nueva venta | {"productId":2,"saleDate":"2022-08-19", "userId":"rloria", "customerName": "Ever Barahona", "quantity":2, "unitPrice":1500} | {"productId":2,"saleDate":"2022-08-19", "userId":"rloria", "customerName": "Ever Barahona", "quantity":2, "unitPrice":1500} | https://tools-sales-api.azurewebsites.net/sales |  |
+| validateAProduct | GET | Valida si un producto tiene una venta | productId | [{"productId":2,"saleDate":"2022-08-19", "userId":"rloria", "customerName": "Ever Barahona", "quantity":2, "unitPrice":1500}] | https://tools-sales-api.azurewebsites.net/sales/2 | Si no existe el producto, se devuelve: {"success": "false","message": "The product does not exist. Specify a product that is already stored."} |
+
+
+## Qué debe realizar?
+1. Realizar una prueba de automatización para el endpoint de getAllSales y create_a_sale.
+2. En el endpoint validateAProduct hay un error, verifique cuál es el error y dónde es el error. Importante: Este endpoint obtiene información del api de product.
+
