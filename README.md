@@ -1,4 +1,4 @@
-# Ejercicio en clase ItI 1312-2022
+# Ejercicio en clase ItI 1312-2023
 
 # Cómo correr los apis localmente?
 
@@ -26,7 +26,7 @@
 | UpdateProduct | PUT | Actualizar un producto | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | {"productId": 11,"productName": "Big YELLOW Hammer","productCode": "GDN-0030","releaseDate": "March 20, 2022","price": 70,"description":"Steel hammer","starRating": 4,"imageUrl": "assets/images/hammer.jpg"} | https://tools-product-api.azurewebsites.net/products/ | Si el prducto que desea actualizar no existe, se devuelve: {"success": "false","message": "The product does not exist. Specify a product that is already stored."} |
 
 
-## Qué debe realizar?
+## Qué debe realizar? -- 1 Abril 2023
 1. Investigar sobre pruebas de automatización en Postman.
 2. Realizar pruebas de automatización para cada endpoint brindado (ver los endpoints en el cuadro de arriba)
 3. Subir al campus el archivo de la prueba o video donde demuestre la realización de la prueba.
@@ -34,7 +34,7 @@
 
 
 
-## Endpoints de api SALES -- 19 Agosto 2022
+## Endpoints de api SALES
 | Endpoint | Método | Descripción | Input | Output | Ejemplo | Excepciones |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
 | getAllSales | GET | Retorna todos las ventas |  | [{"productId":2,"saleDate":"2022-08-19", "userId":"rloria", "customerName": "Ever Barahona", "quantity":2, "unitPrice":1500}] | https://tools-sales-api.azurewebsites.net/sales | Si no hay ventas se devuelve un [] | 
