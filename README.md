@@ -10,13 +10,6 @@
 7. No cerrar la terminal, ni el Visual Code y acceder al api con la siguiente url:  [http://localhost:3008/users](http://localhost:3008/users)
 
 
-
-## Qué debe realizar? -- 1 Abril 2023
-1. Investigar sobre pruebas de automatización en Postman.
-2. Realizar pruebas de automatización para cada endpoint brindado (ver los endpoints en el cuadro de arriba)
-3. Subir al campus el archivo de la prueba o video donde demuestre la realización de la prueba.
-
-
 ## Endpoints de api Users
 | Endpoint | Método | Descripción | Input | Output | Ejemplo | Excepciones |
 | ------ | ------ | ------ | ------ | ------ | ------ | ------ |
