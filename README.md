@@ -1,5 +1,4 @@
-# Ejercicio en clase ItI 1312-2023
-
+# Ejercicio en clase
 # Cómo correr los apis localmente?
 
 1. Tener instalado Visual Code y nodejs
@@ -12,9 +11,6 @@
 6. Para correr el app ejecutar en la terminal el siguiente comando: **npm start**
 7. No cerrar la terminal, ni el Visual Code y acceder al api de products con la siguiente url: [http://localhost:3007/products](http://localhost:3007/products) y el api de users con la siguiente url:  [http://localhost:3008/users](http://localhost:3008/users)
 
-## Apis en cloud
-- Users: [https://tools-users-api.azurewebsites.net/users/](https://tools-users-api.azurewebsites.net/users/)
-- Products: [https://tools-product-api.azurewebsites.net/products/](https://tools-product-api.azurewebsites.net/products/)
 
 ## Endpoints de los apis
 | Endpoint | Método | Descripción | Input | Output | Ejemplo | Excepciones |
