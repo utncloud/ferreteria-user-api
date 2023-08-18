@@ -17,3 +17,4 @@
 | users | Get | Devuelve la lista de usuarios |  | [{"userName":"usuario", "password":"clave", "email":"email@email.com", "isActive":true, "role":"Admin"},{"userName":"usuario", "password":"clave", "email":"email@email.com", "isActive":true, "role":"Admin"},{"userName":"usuario", "password":"clave", "email":"email@email.com", "isActive":true, "role":"Admin"}] | http://localhost:3008/users |  |
 | users/:userName | GET | Devuelve un usuario en específico | userName | {"userName":"usuario", "password":"clave", "email":"email@email.com", "isActive":true, "role":"Admin"} | http://localhost:3008/users/userName | Si no existe se devuelve un mensaje: { success: 'false', message: 'User not found' } |
 
+"# ferreteria-user-api" 
