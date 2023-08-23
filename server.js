@@ -2,7 +2,7 @@ require('dotenv').config();
 
 var express = require('express'),
   app = express(),
-  port = process.env.PORT || 3006,
+  port = process.env.PORT || 3008,
   bodyParser = require('body-parser');
 
   console.log(process.env.PORT)
